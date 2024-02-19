@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Banner 300x600</title>
+<meta name="ad.size" content="width=300,height=250">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script type="text/javascript"> var clickTag = "https://google.com/";</script>
+<style>
+	/*--CSS start here--*/
+
+* {margin: 0; padding: 0; }
+
+img {border: 0; vertical-align: top; }
+
+.banner-box {background: #fff; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 300px; height: 600px; overflow: hidden; cursor: pointer; }
+.all_frame {left: 0; top: 0; position: absolute; width: 100%; height: 100%; overflow: hidden; }
+div {position: absolute; } 
+.main_bg {left: 0px; top: 0px; }
+.frame_phone {bottom: 0; overflow: hidden; height: 139px; width: 191px; display: block; left: 46px; }
+.cell_phone {bottom: 0px; left: 0; }
+.cell_phone_logo {left: 59px; bottom: 44px; } 
+.text_1 {left: 63px; top: 189px; } 
+.text_2 {left: 63px; top: 277px; } 
+.text_3 {right: 4px; bottom: 4px; } 
+.text_1,.text_2,.text_3,.frame_phone,.cell_phone_logo {opacity: 0; }
+
+/*--Animation start here--*/
+
+
+.frame_phone {    
+  -webkit-animation: mymove1;
+  	animation: mymove1;
+  	-webkit-animation-duration: 2s;
+  	        animation-duration: 2s;
+  	-webkit-animation-delay: 0.1s;
+  	        animation-delay: 0.1s;
+  	-webkit-animation-fill-mode: forwards;
+  	        animation-fill-mode: forwards;
+}
+
+.cell_phone_logo {
+	animation-name:fadeIn;
+	-webkit-animation-name:fadeIn;
+	animation-duration:2s;
+	-webkit-animation-duration:2s;
+	animation-timing-function: ease-in;
+	-webkit-animation-timing-function:ease-in;
+	animation-delay:1.8s;
+	-webkit-animation-delay:1.8s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.text_3 {
+	-webkit-animation: mymove2;
+  	animation: mymove2;
+  	-webkit-animation-duration: 2s;
+  	        animation-duration: 2s;
+  	-webkit-animation-delay: 2s;
+  	        animation-delay: 2s;
+  	-webkit-animation-fill-mode: forwards;
+  	        animation-fill-mode: forwards;
+}
+.text_1 {
+	-webkit-animation: mymove3;
+  	animation: mymove3;
+  	-webkit-animation-duration: 2s;
+  	        animation-duration: 2s;
+  	-webkit-animation-delay: 3s;
+  	        animation-delay: 3s;
+  	-webkit-animation-fill-mode: forwards;
+  	        animation-fill-mode: forwards;
+}
+.text_2 {
+	-webkit-animation: mymove4;
+  	animation: mymove4;
+  	-webkit-animation-duration: 2s;
+  	        animation-duration: 2s;
+  	-webkit-animation-delay: 5s;
+  	        animation-delay: 5s;
+  	-webkit-animation-fill-mode: forwards;
+  	        animation-fill-mode: forwards;
+}
+/*--Animation end here--*/
+
+/*-Keyframe start here--*/
+
+
+
+@-webkit-keyframes mymove1 {
+  from {bottom: -140px; opacity: 0;}
+  to {bottom: 0px; opacity: 1;}
+}
+@keyframes mymove1 {
+  from {bottom: -140px; opacity: 0;}
+  to {bottom: 0px; opacity: 1;}
+}
+@-webkit-keyframes mymove2 {
+  from {right: -12px; opacity: 0;}
+  to {right: 4px; opacity: 1;}
+}
+@keyframes mymove2 {
+  from {right: -12px; opacity: 0;}
+  to {right: 4px; opacity: 1;}
+}
+@-webkit-keyframes mymove3 {
+  from {left: -175px; opacity: 0;}
+  to {left: 63px; opacity: 1;}
+}
+@keyframes mymove3 {
+  from {left: -175px; opacity: 0;}
+  to {left: 63px; opacity: 1;}
+}
+@-webkit-keyframes mymove4 {
+  from {left: -175px; opacity: 0;}
+  to {left: 63px; opacity: 1;}
+}
+@keyframes mymove4 {
+  from {left: -175px; opacity: 0;}
+  to {left: 63px; opacity: 1;}
+};
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+/*-Keyframe end here--*/
+
+
+/*--CSS end here--*/
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+	<div class="main_bg"><img src="main_bg.jpg" alt="" title=""></div>
+	<div class="all_frame">
+    	<div class="text_1"><img src="text_11.png" alt="" title=""></div>
+	  	<div class="text_2"><img src="text_22.png" alt="" title=""></div>	  	
+		<div class="text_3"><img src="text_33.png" alt="" title=""></div>	  	
+	  	<div class="frame_phone">
+	  		<div class="cell_phone"><img src="cell_phone.png" alt="" title=""></div>
+			<div class="cell_phone_logo"><img src="logo11.png" alt="" title=""></div>	
+	  	</div>
+	</div>
+</div>
+<!--Banner end here-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var maxAppend = 0;
+setInterval(function() { 
+if (maxAppend >= 3) return;
+ var addinput = $('.all_frame').detach().clone().appendTo('.banner-box');
+   maxAppend++;
+    $("i").append(addinput);
+}, 7500);
+</script>
+</body>
+</html>
